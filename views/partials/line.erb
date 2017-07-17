@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header" role="tab" id="heading<%= line['formatted_id'] %>">
+    <h5 class="mb-0">
+      <a data-toggle="collapse" data-parent="#lines" href="#collapse<%= line['formatted_id'] %>" aria-expanded="true" aria-controls="collapse<%= line['formatted_id'] %>">
+        <%= line_name %>: <%= incident_count(line) %>
+      </a>
+    </h5>
+  </div>
+
+  <div id="collapse<%= line['formatted_id'] %>" class="collapse" role="tabpanel" aria-labelledby="heading<%= line['formatted_id'] %>">
+    <div class="card-block">
+      <div id="<%= line['formatted_id'] %>_incidents" role="tablist" aria-multiselectable="true">
+        <% line['incidents'].each do |incident| %>
+          <%= erb :'partials/incident', locals: { incident: incident, line: line } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
