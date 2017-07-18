@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'rest-client'
 require 'nokogiri'
 
-module Transalert
+module Subwayboard
   class Application < Sinatra::Application
     CODE_TO_NAME = {
       'MTA NYCT_1' => '1 Train',
