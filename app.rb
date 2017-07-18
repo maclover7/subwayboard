@@ -28,7 +28,8 @@ module Subwayboard
       'MTA NYCT_R' => 'R Train',
       'MTA NYCT_W' => 'W Train',
       ###
-      'MTA NYCT_GS' => '42nd St Shuttle'
+      'MTA NYCT_GS' => '42nd St Shuttle',
+      'MTA NYCT_SI' => 'SIR'
     }
 
     get '/' do
