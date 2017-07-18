@@ -11,3 +11,10 @@ To start the application, run the following commands:
 docker build -t subwayboard .
 docker run -p 3000:3000 -e PORT=3000 subwayboard
 ```
+
+### Deployment
+
+```bash
+docker build -t subwayboard .
+heroku container:push web
+```
