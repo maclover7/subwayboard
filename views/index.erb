@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <head>
+  <title>SubwayBoard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container">
-    <h1>SubwayBoard</h1>
+    <h1 style="text-align: center">SubwayBoard</h1>
 
     <div id="lines" role="tablist" aria-multiselectable="true">
-      <% lines_with_incidents.each do |line_name, line_data| %>
-        <%= erb :'partials/line', locals: { line_name: line_name, line: line_data } %>
-      <% end %>
+      <div class="row">
+        <div class="col-md-6">
+          <% lines_with_incidents[0..(lines_with_incidents.length / 2)].each do |line_name, line_data| %>
+            <%= erb :'partials/line', locals: { line_name: line_name, line: line_data } %>
+          <% end %>
+        </div>
+
+        <div class="col-md-6">
+          <% lines_with_incidents[(lines_with_incidents.length / 2)..lines_with_incidents.length].each do |line_name, line_data| %>
+            <%= erb :'partials/line', locals: { line_name: line_name, line: line_data } %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
