@@ -79,6 +79,19 @@ module Subwayboard
 
     private
 
+    def card_classes_for(line)
+      incident_count = line['incidents'].count
+      planned_incident_count = line['incidents'].select { |i| i['planned'] == 'true' }.length
+
+      return "" if incident_count < 1
+
+      if incident_count == planned_incident_count
+        "card-inverse card-warning"
+      else
+        "card-inverse card-danger"
+      end
+    end
+
     def incident_count(line)
       incident_count = line['incidents'].count
       str = "#{incident_count} incident"

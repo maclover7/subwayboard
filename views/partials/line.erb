@@ -1,7 +1,7 @@
-<div class="card">
+<div class="card <%= card_classes_for(line) %>">
   <div class="card-header" role="tab" id="heading<%= line['formatted_id'] %>">
     <h5 class="mb-0">
-      <a data-toggle="collapse" data-parent="#lines" href="#collapse<%= line['formatted_id'] %>" aria-expanded="true" aria-controls="collapse<%= line['formatted_id'] %>">
+      <a style="color: #fff;" data-toggle="collapse" data-parent="#lines" href="#collapse<%= line['formatted_id'] %>" aria-expanded="true" aria-controls="collapse<%= line['formatted_id'] %>">
         <%= line_name %>: <%= incident_count(line) %>
       </a>
     </h5>
