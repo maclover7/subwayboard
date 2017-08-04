@@ -1,1 +1,1 @@
-server: puma -b tcp://0.0.0.0:3000 -e production
+web: puma -b tcp://0.0.0.0:3000 -e production
