@@ -1,1 +1,1 @@
-web: puma -b tcp://0.0.0.0:3000 -e production
+web: bundle exec puma -b tcp://0.0.0.0:9292

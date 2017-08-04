@@ -78,6 +78,10 @@ module Subwayboard
       }
     end
 
+    get '/ping' do
+      'ok'
+    end
+
     private
 
     def card_classes_for(line)

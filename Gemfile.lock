@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/maclover7/macluster-deploy
-  revision: 944f6c5a8eb5b15dd4ff25d445d1ebdab0d877b0
+  revision: 2b222d75e58c7f7cea45997199b521892b238c5e
   specs:
     macluster-deploy (0)
 
