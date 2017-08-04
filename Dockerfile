@@ -11,14 +11,6 @@ RUN bundle install --deployment --without development
 
 ADD . /app
 
-#ADD Procfile /app/Procfile
-#ADD config/puma.rb /app/config/puma.rb
-#ADD config.ru /app/config.ru
-#ADD app.rb /app/app.rb
-#ADD views/index.erb /app/views/index.erb
-#ADD views/partials/line.erb /app/views/partials/line.erb
-#ADD views/partials/incident.erb /app/views/partials/incident.erb
-
 EXPOSE 3000
 
 CMD ["bundle", "exec", "foreman", "start", "-f", "Procfile"]
