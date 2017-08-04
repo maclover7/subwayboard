@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/maclover7/macluster-deploy
+  revision: 944f6c5a8eb5b15dd4ff25d445d1ebdab0d877b0
+  specs:
+    macluster-deploy (0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,6 +52,7 @@ PLATFORMS
 
 DEPENDENCIES
   foreman
+  macluster-deploy!
   nokogiri
   pry
   puma
